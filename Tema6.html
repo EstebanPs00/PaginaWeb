@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+            <img class="hamburguer" src="img/hamburguesa.svg" alt="">
+            <nav class="menu-navegacion">
+                <a href="Tema1.html">Tema 1</a>
+                <a href="Tema2.html">Tema 2</a>
+                <a href="Tema3.html">Tema 3</a>
+                <a href="Tema4.html">Tema 4</a>
+                <a href="Tema5.html">Tema 5</a>
+                <a href="Tema6.html">Tema 6</a>
+                <a href="Tema7.html">Tema 7</a>
+                <a href="Tema8.html">Tema 8</a>
+            </nav>
+            <main>
+            <h1>Tema 1.6: <br>Principales Aspectos del Hardware de Importancia para los Sistemas Operativos</br>
+            </h1>
+            <hr>
+                            <h3>Compaginación del almacenamiento:</h3>
+                            <ul>
+                                <li>Objetivo: acelerar el acceso al almacenamiento primario (bancos de memoria).</li>
+                                <li>Generalmente, mientras cualquiera de las localidades de un banco de almacenamiento primario, está siendo accedida, ninguna otra referencia puede estar en curso.</li>
+                                <li>La compaginación del almacenamiento coloca localidades de memoria adyacentes en diferentes bancos de almacenamiento, para permitir varias referencias al mismo tiempo.</li>
+                            </ul>
+<hr><br>
+                            <h3>Registro de relocalización:</h3>
+                            <ul>
+                                <li>Permite relocalizar de forma dinámica los programas.</li>
+                                <li>La dirección base de un programa en la memoria principal se sitúa en el registro de relocalización. </li>
+                                <li>El contenido del registro de relocalización se añade a cada dirección desarrollada por un programa en ejecución. </li>
+                                <li>Permite al programa residir en localizaciones diferentes a aquellas para las cuales fue traducido.</li>
+                            </ul><hr><br>
+                            <h3>Interrupciones y escrutinio:</h3>
+                            <ul>
+                                <li>Interrupciones: <br>Permiten a una unidad obtener la inmediata atención de otra, de manera que la primera pueda informar de un cambio de estado:
+                                    <ul>
+                                        <li>Permite salvar el “estado” de la unidad interrumpida antes de procesar la interrupción. </li>
+                                    </ul>
+                                </li>
+                                <li>Escrutinio: <br>Técnica que permite que una unidad verifique el estado de otra unidad de funcionamiento independiente. </li>
+                            </ul><hr><br>
+                            <h3>Utilización del “buffer”:</h3>
+                                <li>Un “buffer” es un área de almacenamiento primario destinada a contener datos durante transferencias de e / s. </li>
+                                <li>Cuando concluye la transferencia los datos pueden ser accedidos por el procesador. </li>
+                                <li> Esquema de “entradas de buffer simple”:
+                                    <ul>
+                                        <li>El canal deposita datos en el buffer.</li>
+                                        <li>El procesador procesa estos datos.</li>
+                                        <li>El canal deposita nuevos datos, etc.</li>
+                                        <li> No puede haber simultaneidad entre operaciones de colocar datos en el buffer y procesarlos:
+                                            <ul>
+                                                <li>Afecta la performance.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li> Esquema de “entradas de buffer doble”:
+                                        <li> Permite la sobreposición de operaciones de e / s con el procesamiento:
+                                                <li>Mejora la performance. </li>
+                                        </li>
+                                        <li>Mientras el canal deposita datos en un buffer el procesador puede estar procesando los datos del otro buffer.</li>
+                                        <li> Cuando el procesador concluye el proceso de los datos del primer buffer, puede continuar con los datos del segundo, mientras el canal deposita nuevos datos en el primer buffer:
+                                                <li>Es la técnica de “buffer biestable ( o en flip flop)”.</li>
+                                        </li>
+                                </li>
+                                <hr><br>
+                            <h3>Dispositivos periféricos:</h3>
+                            <ul>
+                                <li>Permiten el almacenamiento de grandes cantidades de información fuera del almacenamiento principal. </li>
+                                <li>Existen dispositivos secuenciales y de acceso directo. </li>
+                                <li>Las características y prestaciones son muy variadas.</li>
+                            </ul><hr><br>
+                            <h3>Protección del almacenamiento: </h3>
+                            <ul>
+                                <li>Limita el número de direcciones que un programa puede referenciar.</li>
+                                <li>Es esencial en los sistemas multiusuario.</li>
+                                <li>Se implementa mediante los “registros de límites”, que definen las direcciones superior e inferior del bloque de almacenamiento afectado a un determinado programa.</li>
+                                <li> También se pueden utilizar “claves de protección del almacenamiento” anexas a áreas de almacenamiento primario:
+                                    <ul>
+                                        <li>Un programa solo puede acceder a localidades de almacenamiento cuyas claves de protección concuerdan con las del programa.</li>
+                                    </ul>
+                                </li>
+                            </ul><hr><br>
+                            <h3>Temporizadores y relojes:</h3>
+                            <ul>
+                                <li>“Temporizador de intervalos”: <br>Previene que un solo usuario monopolice el procesador en sistemas multiusuario. </li>
+                                <li>El temporizador genera una interrupción al procesador cuando expira el intervalo asignado a un usuario.</li>
+                                <li>“Reloj horario”: <br>Permite al computador hacer un seguimiento de la “hora del reloj de pared”, con una exactitud de millonésimas de segundo o mayor. </li>
+                            </ul><hr><br>
+                            <h3>Operaciones en línea y fuera de línea; procesadores satélite:</h3>
+                            <ul>
+                                <li>“Operación en línea”: <br>Los periféricos utilizados están conectados al procesador. </li>
+                                <li>“Operación fuera de línea”: <br>Los periféricos utilizados están conectados a unidades de control que no están conectadas al sistema central o principal. </li>
+                            </ul>
+                            <h3>Canales de entrada / salida:</h3>
+                            <ul>
+                                <li>Son sistemas computacionales de propósito especial, dedicados al manejo de la e / s con independencia del procesador principal.</div>
+                        <li>
+                            <li>Tienen acceso directo al almacenamiento principal para almacenar o recuperar información.</li>
+                            <li>Evitan al procesador la mayor parte de la carga de manejar la e / s, incrementando la concurrencia.</li>
+                            <li> Los principales tipos de canales son los siguientes:
+                                <ul>
+                                    <li>Selectores.</li>
+                                    <li>Multiplexores de bytes.</li>
+                                    <li>Multiplexores de bloques.</li>
+                                </ul>
+                            </li>
+                            </ul><hr><br>
+                        <h3>Robo de ciclo:</h3>
+                        <ul>
+                            <li> Significa que en la competencia entre el procesador y los canales para acceder a un determinado banco de almacenamiento primario (memoria principal), se da prioridad a los canales:
+                                <ul>
+                                    <li>Se optimiza el uso de los dispositivos de e / s.</li>
+                                </ul>
+                            </li>
+                        </ul><hr><br>
+                        <h3>Direccionamiento de base más desplazamiento:</h3>
+                        <ul>
+                            <li>Todas las direcciones son añadidas al contenido de un “registro de base”.</li>
+                            <li> Los programas son “independientes de la localización”:
+                                <ul>
+                                    <li>Especialmente importante en ambientes multiusuario.</li>
+                                </ul>
+                            </li>
+                        </ul><hr><br>
+                        <h3>Estado de problema, estado supervisor, instrucciones privilegiadas:</h3>
+                        <ul>
+                            <li>Corresponde a distintos “estados de ejecución”.</li>
+                            <li>“Estado de problema o de usuario”: <br>Estado en que corren los programas de usuario:
+                                <ul>
+                                    <li>Tiene acceso a un subconjunto de instrucciones del conjunto de instrucciones de la máquina.</li>
+                                </ul>
+                            </li>
+                            <li>“Estado supervisor o de núcleo”: <br>Generalmente el S. O. corre así con la categoría de “usuario de mayor confianza o nivel”
+                                <ul>
+                                    <li>Tiene acceso a todas las instrucciones del conjunto de instrucciones de la máquina.</li>
+                                </ul>
+                            </li>
+                            <li>Si el sistema soporta más de dos estados:
+                                <ul>
+                                    <li>Se puede instrumentar una “granulación de protección” más fina.</li>
+                                    <li> Permite conceder accesos por medio del “principio de menos privilegio”:
+                                        <ul>
+                                            <li>Se debe garantizar a cada usuario en particular la menor cantidad de privilegio y acceso que necesite para cumplir sus tareas.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>“Instrucciones privilegiadas”: <br>Son aquellas a las que no se tiene acceso en estado de problema. </li>
+                        </ul><hr><br>
+                        <h3>Almacenamiento virtual:</h3>
+                        <ul>
+                            <li>Los sistemas de almacenamiento virtual permiten a los programas referenciar direcciones que no necesitan corresponder con las direcciones reales disponibles en el almacenamiento primario.</li>
+                            <li>Las “direcciones virtuales” desarrolladas por los programas en ejecución son traducidas dinámicamente por el hardware a las “direcciones reales” de instrucciones y datos del almacenamiento principal.</li>
+                            <li>Los programas pueden referenciar espacios de direcciones mucho mayores que los espacios de direcciones disponibles en el almacenamiento primario.</li>
+                            <li> Se utilizan técnicas de:
+                                <ul>
+                                    <li>“Paginación”: <br>Bloques de datos de tamaño fijo van o vienen entre el almacenamiento primario y el secundario. </li>
+                                    <li>“Segmentación”: <br>Identifica las unidades lógicas de los programas y datos para facilitar el control de acceso y participación. </li>
+                                </ul>
+                            </li>
+                        </ul><hr><br>
+                        <h3>Multiprocesamiento:</h3>
+                        <ul>
+                            <li>Varios procesadores comparten un almacenamiento primario común y un solo S. O.</li>
+                            <li> Es necesario “secuencializar” el acceso a una localización (dirección) de almacenamiento compartido para que dos o más procesadores no intenten:
+                                <ul>
+                                    <li>Modificarla al mismo tiempo.</li>
+                                    <li>Modificarla uno(s) mientras otro(s) intenta(n) leerla.</li>
+                                </ul>
+                            </li>
+                        </ul><hr><br>
+                        <h3>Acceso directo a la memoria (DMA):</h3>
+                        <ul>
+                            <li>Requiere una sola interrupción al procesador por cada bloque de caracteres transferidos durante la operación de e / s, lo cual mejora significativamente la performance (rendimiento).</li>
+                            <li>Es como si el procesador, en vez de interrumpido fuera retrasado.</li>
+                            <li>Resulta muy útil para altos requerimientos de e / s.</li>
+                            <li>“Canal DMA”: <br>Es el hardware responsable del robo de ciclos y de la operación de los dispositivos de e / s. </li>
+                        </ul><hr><br>
+                        <h3>Canalización:</h3>
+                        <ul>
+                            <li>Técnica de hardware utilizada para explotar ciertos tipos de paralelismo durante el procesamiento de instrucciones.</li>
+                            <li>Varias instrucciones pueden estar simultáneamente en diferentes estados de ejecución.</li>
+                        </ul><hr><br>
+                        <h3>Jerarquía de almacenamiento:</h3>
+                        <ul>
+                            <li> Los niveles de almacenamiento incluyen:
+                                    <li>Almacenamiento primario: memoria principal.</li>
+                                    <li>Almacenamiento secundario: discos, cintas, etc. o Almacenamiento “caché”: <br>Memoria muy veloz diseñada para aumentar la velocidad de ejecución de los programas:
+                                        <ul>
+                                            <li>Aloja la parte (instrucciones y datos) en ejecución de un programa.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Los niveles de almacenamiento crean “jerarquías de almacenamiento”: <br>Caché, almacenamiento primario, almacenamiento secundario. </li>
+                            <li> Al bajar en la jerarquía:
+                                <ul>
+                                    <li> Descienden el costo y la velocidad.</li>
+                                    <li>Aumenta la capacidad.</li>
+                                </ul>
+                            </li>
+                            <li>“Espacio de direcciones”: <br>Conjunto de todas las direcciones disponibles para un programa. </li>
+                        </ul>
+                        <hr>
+                <h4>Video</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xnDJvnCe64w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Evaluación</h4>
+                <hr>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSclAWJ3mNGBIylOLPHEiNG8JwdIIj4pBjx2V-VnQYzyuEhtCw/viewform" target="_BLANK ">
+                Empezar Evaluación del Tema
+                </a>
+            </main>
+    <br>
+    <br>
+    <nav id="Nav">
+        <center><a href="index.html"class="button">Regresar</a></center>
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>

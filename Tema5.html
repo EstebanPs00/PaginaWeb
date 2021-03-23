@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+            <img class="hamburguer" src="img/hamburguesa.svg" alt="">
+            <nav class="menu-navegacion">
+                <a href="Tema1.html">Tema 1</a>
+                <a href="Tema2.html">Tema 2</a>
+                <a href="Tema3.html">Tema 3</a>
+                <a href="Tema4.html">Tema 4</a>
+                <a href="Tema5.html">Tema 5</a>
+                <a href="Tema6.html">Tema 6</a>
+                <a href="Tema7.html">Tema 7</a>
+                <a href="Tema8.html">Tema 8</a>
+            </nav>
+            <h1>Tema 1.5: <br>Estructura de los Sistemas Operativos</br>
+            </h1>
+            <hr>
+        <h4>Sistemas Monolíticos</h4>
+        <p>Es un Sistema Operativo con colección de procedimientos que se pueden llamar entre sí, sin una estructura propiamente dicha.</p>
+                <img src="img/Captura5.JPG" height="250px"><br>
+            <br>
+            <p>A la ejecución de los servicios del Sistema Operativo se le llama “Llamada al sistema” en la que se realizan los siguientes procesos:</p>
+                <li>Memoria principal</li>
+                <li>Programa del usuario en modo usuario</li>
+                <li>Sistema operativo en modo núcleo</li>
+                    <img src="img/sist mon.JPG" height="250px"><br>
+<hr>
+                    <h4>Sistemas de capas</h4>
+                    Es una estructura simple generalizada para los sistemas monolíticos. Organiza el Sistema Operativo con una jerarquía en capas de menos a mas. Siendo el primero de esta clase el sistema "THE" (1968).<br>
+                            <img src="img/sistemas c.JPG" height="250px"><br>
+                                    <h5>Capa 0</h5>
+                                    <ul>
+                                    <li>Trabaja con la asignación del procesador</li>
+                                    <li>Alterna procesos</li>
+                                    <li>Proporciona multiprogramación</li></ul>
+                                
+                                <h5>Capa 1</h5><ul>
+                                <li>Administra la memoria</li>
+                                <li>Asegura que las páginas requeridas lleguen a los procesos de memoria</li></ul>
+                            
+                                <h5>Capa 2</h5>
+                        <ul>
+                            <li>Administra la comunicación entre cada proceso y la consola</li>
+                        </ul>
+
+                        <h5>Capa 3</h5>
+                    <ul>
+                        <li>Controla dispositivos E/S</li>
+                    </ul>
+
+                    <h5>Capa 4</h5>
+                <ul>
+                    <li>Aloja los programas del usuario</li>
+                </ul>
+
+                    <h5>Capa 5</h5>
+                <ul>
+                    <li>Localiza el proceso utilizado del sistema</li>
+                </ul>
+<hr>
+                <h4>Máquinas Virtuales</h4>
+                    <p>Separan las funciones multiprogramación de la máquina extendida. El monitor de máquina virtual se ejecuta en el hardware y realiza multiprogramación soportando periféricos virtuales.</p>
+                        <img src="img/maq v.JPG" height="250px" ><br>
+<hr>
+                    <h4>Modelo cliente-servidor</h4>
+                    <p>Los Sistemas Operativos modernos explotan la idea de mover el código a las capas superiores y mantener un núcleo mínimo. La mayoría de las funciones del Sistema Operativo se implantan en los procesos del usuario.</p>
+                            <img src="img/mod c.JPG" height="250px"><br>
+                    <br>
+                    <p>El Sistema Operativo se fracciona en 4 partes así haciendo cada parte más pequeña y aun más controlable.</p>
+                    <ul>
+                        <li>Servicio a archivos</li>
+                        <li>Servicio a procesos</li>
+                        <li>Servicio a terminales</li>
+                        <li>Servicio a memoria</li>
+                    </ul>
+                            <img src="img/func.JPG" height="250px" ><br>
+<hr>
+                <h4>Video</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/p1QH6kQE-rk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Evaluación</h4>
+                <hr>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_sqZq8_y_UrBTdNtyXeXb_3bJyjxEARzKMjekXPHlKzaQfQ/viewform " target="_BLANK ">
+                Empezar Evaluación del Tema
+                </a>
+    <br>
+    <br>
+    <nav id="Nav">
+        <center><a href="index.html"class="button">Regresar</a></center>
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
